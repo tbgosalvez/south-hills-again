@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">Concert Tickets</string>
+    <string name="hello_world">hi</string>
+
+    <string name="tv_main">Wilkommen, mein Freund! Treffen Sie Ihren Wahl.</string>
+    <string name="tv_tickets_label">Wieviele Karten möchten Sie?</string>
+    <string name="tv_price_per_ticket_label">Preis pro Konzertkarte:</string>
+    <string name="tv_total_price_label">Endliche Kostet:</string>
+    <string name="tv_select_artist">Wählen Sie einen Artist:</string>
+
+    <string name="title_activity_thanks_msg">Danke schön für dein Kauf!</string>
+    <string name="title_activity_order_summary">order summary</string>
+    <string name="title_activity_billing_info">Billing Information</string>
+    <string name="title_activity_register">Register</string>
+
+    <string name="btn_send_msg">echo what you have just typed (or nothing)</string>
+    <string name="btn_send_radio_selection">echo back selection</string>
+    <string name="btn_update_price">Preis Aktualisieren</string>
+    <string name="btn_send_data">Kaufen</string>
+    <string name="btn_stop_music">musik gehören</string>
+    <string name="btn_go_back_to_main">&lt;--Back to Order Form</string>
+    <string name="tv_pmt_info">Billing Info</string>
+    <string name="hint_fname">Erste Name</string>
+    <string name="hint_lname">Letzte Name</string>
+    <string name="lbl_snacks">Welche Snacke möchtest du? ($0.75 ea)</string>
+    <string name="cb_crunchy">crunchy stuff</string>
+    <string name="cb_chewy">chewy stuff</string>
+    <string name="cb_fluffy">fluffy stuff</string>
+    <string name="cb_drink">drink (just one)</string>
+    <string name="cb_melt">something that has melted</string>
+    <string name="img_desc">Image of selected Artist or Album cover</string>
+
+    <!-- for previous assignments -->
+    <!--
+    <string name="lbl_type_0">Vampires</string>
+    <string name="lbl_type_1">Witches</string>
+    <string name="lbl_type_2">Werewolves</string>
+    <string name="lbl_type_3">Hybrids</string>
+
+    <string name="lbl_band_0">Ariana Grande</string>
+    <string name="lbl_band_1">Common</string>
+    <string name="lbl_band_2">Metallica</string>
+    <string name="lbl_band_3">Avicii</string>
+    <string name="lbl_band_4">Two-Door Cinema Club</string>
+-->
+
+    <string-array name="array_artist_names">
+        <item>Metallica</item>
+        <item>Taylor Swift</item>
+        <item>Ariana Grande</item>
+        <item>Rammstein</item>
+    </string-array>
+
+    <string-array name="array_payment_types">
+        <item>Select Payment Type&#8230;</item>
+        <item>Gold</item>
+        <item>Fiat Currency</item>
+        <item>Bitcoin</item>
+        <item>Ether</item>
+        <item>Time</item>
+    </string-array>
+    <string name="title_activity_login">in-Log</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_register">Register!</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="cancel">Cancel</string>
+
+</resources>

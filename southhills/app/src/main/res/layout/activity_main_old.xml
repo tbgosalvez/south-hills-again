@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.tbgosalvez.southhills.MainActivity">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="10dp"
+        android:text="@string/tv_main"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/tv_numTickets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="@string/tv_tickets_label"
+        android:textAllCaps="false"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/et_numTickets"
+        android:layout_below="@+id/tv_main"/>
+
+    <EditText
+        android:id="@+id/et_numTickets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:inputType="number"
+        android:hint="enter a number"
+        android:text="1"
+        android:selectAllOnFocus="true"
+        android:layout_marginStart="78dp"
+        android:layout_below="@+id/tv_main"
+        android:layout_toEndOf="@+id/tv_ticketPriceLabel"/>
+
+    <Button
+        android:id="@+id/btn_check_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/et_numTickets"
+        android:textAllCaps="false"
+        android:text="@string/btn_update_price"/>
+
+    <TextView
+        android:id="@+id/tv_ticketPriceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="@string/tv_price_per_ticket_label"
+        android:layout_below="@+id/btn_check_price"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="23dp"/>
+
+    <TextView
+        android:id="@+id/tv_ticket_price_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0.00"
+        android:layout_alignBottom="@+id/tv_ticketPriceLabel"
+        android:layout_alignTop="@+id/tv_ticketPriceLabel"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/tv_numTickets"
+        android:layout_alignStart="@+id/et_numTickets"/>
+
+    <TextView
+        android:id="@+id/tv_total_price_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="@string/tv_total_price_label"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/tv_ticketPriceLabel"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:id="@+id/tv_total_price_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="$0.00"
+        android:layout_alignBaseline="@+id/tv_total_price_label"
+        android:layout_alignBottom="@+id/tv_total_price_label"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/tv_ticket_price_value"/>
+
+    <!-- previous assignment
+        <RadioGroup
+            android:id="@+id/rg_bands"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_band_0"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_band_1"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_band_2"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_band_3"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_band_4"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_send_radio_selection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="@string/btn_send_radio_selection"/>
+        -->
+
+    <TextView
+        android:id="@+id/tv_band_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tv_total_price_value"
+        android:paddingTop="20dp"
+        android:text="@string/tv_select_artist"
+        android:textAllCaps="false"/>
+
+    <Spinner
+        android:id="@+id/spn_band_selection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_band_label"
+        android:layout_alignStart="@+id/tv_total_price_value"/>
+
+    <LinearLayout
+        android:id="@+id/ll_snacks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/tv_band_label"
+        android:layout_marginTop="50dp">
+        <TextView
+            android:id="@+id/tv_snack_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="@string/lbl_snacks"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:id="@+id/cb_crunchy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cb_crunchy"/>
+                <CheckBox
+                    android:id="@+id/cb_chewy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cb_chewy"/>
+                <CheckBox
+                    android:id="@+id/cb_fluffy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cb_fluffy"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:id="@+id/cb_melted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cb_melt"/>
+                <CheckBox
+                    android:id="@+id/cb_drink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cb_drink"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_send_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/ll_snacks"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/yen"
+        android:text="@string/btn_send_data"
+        android:textAllCaps="false" />
+
+
+
+</RelativeLayout>
+
+</ScrollView>
