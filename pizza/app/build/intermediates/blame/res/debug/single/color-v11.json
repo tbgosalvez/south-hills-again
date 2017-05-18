@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/tbg/AndroidStudioProjects/pizza/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/home/tbg/.android/build-cache/fec8b043d8e0b6977bfaabd47f094e8f69ebb7c4/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/home/tbg/AndroidStudioProjects/pizza/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/home/tbg/.android/build-cache/fec8b043d8e0b6977bfaabd47f094e8f69ebb7c4/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    }
+]

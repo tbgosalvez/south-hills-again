@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/home/tbg/AndroidStudioProjects/pizza/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/home/tbg/.android/build-cache/fec8b043d8e0b6977bfaabd47f094e8f69ebb7c4/output/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/home/tbg/AndroidStudioProjects/pizza/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/home/tbg/.android/build-cache/fec8b043d8e0b6977bfaabd47f094e8f69ebb7c4/output/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/home/tbg/AndroidStudioProjects/pizza/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/home/tbg/.android/build-cache/fec8b043d8e0b6977bfaabd47f094e8f69ebb7c4/output/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/home/tbg/AndroidStudioProjects/pizza/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/home/tbg/.android/build-cache/fec8b043d8e0b6977bfaabd47f094e8f69ebb7c4/output/res/layout-v21/notification_template_icon_group.xml"
+    }
+]

@@ -1,0 +1,7 @@
+#Tue Feb 07 13:15:22 EST 2017
+base.0=/home/tbg/AndroidStudioProjects/pizza/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_4bf2925b7f77a98b8ae4ead6bb84dc483e06106f
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/home/tbg/AndroidStudioProjects/pizza/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_321daa9c19c783def5f2ac4e3ed79855fb80288a/classes.dex
+base.1=/home/tbg/AndroidStudioProjects/pizza/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_321daa9c19c783def5f2ac4e3ed79855fb80288a
+file.0=/home/tbg/AndroidStudioProjects/pizza/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_4bf2925b7f77a98b8ae4ead6bb84dc483e06106f/classes.dex

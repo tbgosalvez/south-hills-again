@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/tbg/AndroidStudioProjects/pizza/app/build/intermediates/res/merged/debug/raw/jingle.mp3",
+        "source": "/home/tbg/AndroidStudioProjects/pizza/app/src/main/res/raw/jingle.mp3"
+    },
+    {
+        "merged": "/home/tbg/AndroidStudioProjects/pizza/app/build/intermediates/res/merged/debug/raw/bob.m4a",
+        "source": "/home/tbg/AndroidStudioProjects/pizza/app/src/main/res/raw/bob.m4a"
+    },
+    {
+        "merged": "/home/tbg/AndroidStudioProjects/pizza/app/build/intermediates/res/merged/debug/raw/black.mp3",
+        "source": "/home/tbg/AndroidStudioProjects/pizza/app/src/main/res/raw/black.mp3"
+    }
+]

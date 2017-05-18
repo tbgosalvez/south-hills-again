@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/tbg/.android/build-cache/20af5877041a2bed48f6c04328dd06f0e48d1050/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
+        <dex dex="/home/tbg/AndroidStudioProjects/pizza/app/build/intermediates/pre-dexed/debug/classes_18ce93b8b0eabc43cdf61164356dfc373016e89d.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/tbg/AndroidStudioProjects/pizza/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7fadb286755322aaaf03484e62370b1a2c5e1a75">
+        <dex dex="/home/tbg/AndroidStudioProjects/pizza/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_4bf2925b7f77a98b8ae4ead6bb84dc483e06106f/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/tbg/.android/build-cache/3a87d03518172902dc7c7ae7ae2752c1029621ea/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
+        <dex dex="/home/tbg/AndroidStudioProjects/pizza/app/build/intermediates/pre-dexed/debug/classes_a1636f6efc655b84fc85510615fdb0948a2cb50a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/tbg/.android/build-cache/09dfa018957ee5cd11e1ffc54b74704359db2604/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="aee64634871d88a419d59eb743c1258a60f19700">
+        <dex dex="/home/tbg/AndroidStudioProjects/pizza/app/build/intermediates/pre-dexed/debug/classes_86475601888d9c99ad49920bb5088c5788a8a8ba.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/tbg/.android/build-cache/a1c944f77fb1dff17da654aea556a9298b35b4b8/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
+        <dex dex="/home/tbg/AndroidStudioProjects/pizza/app/build/intermediates/pre-dexed/debug/classes_1c5e3a8c3c1fb4b4ed0f7855d2a3e690c9441c30.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/tbg/.android/build-cache/43e0bec319e079286103fc56fddda40651463dc1/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
+        <dex dex="/home/tbg/AndroidStudioProjects/pizza/app/build/intermediates/pre-dexed/debug/classes_cbe14ac471f815d0d3b0ca156c9298dedf01b52d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/tbg/.android/build-cache/ad7026ca714fa5c29e192348f427a9af6217a4bb/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/tbg/AndroidStudioProjects/pizza/app/build/intermediates/pre-dexed/debug/classes_70285f4ce004e7753dcfd9eafbb4c6335a2abf8c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/tbg/.android/build-cache/c10b3a087ced77fef7a9ec7c0f8c4f391363eaa7/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
+        <dex dex="/home/tbg/AndroidStudioProjects/pizza/app/build/intermediates/pre-dexed/debug/classes_2f2e1d07f2e841e36575fc907cc1412f4e544762.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/tbg/.android/build-cache/fec8b043d8e0b6977bfaabd47f094e8f69ebb7c4/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
+        <dex dex="/home/tbg/AndroidStudioProjects/pizza/app/build/intermediates/pre-dexed/debug/classes_045a5e7bd5b38e7879d6a769bff9eeabdcb9e42d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/tbg/dev/android-sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.0-beta4/constraint-layout-solver-1.0.0-beta4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0a9cb567dc008f570c28531720168f19148da965">
+        <dex dex="/home/tbg/AndroidStudioProjects/pizza/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.0-beta4_bc2a99bbc4cc61a874669eccea9f4a19f54ed94a.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/tbg/AndroidStudioProjects/pizza/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="512bc54bb226b7391f24c55763240ff31b6da7bc">
+        <dex dex="/home/tbg/AndroidStudioProjects/pizza/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_321daa9c19c783def5f2ac4e3ed79855fb80288a/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/tbg/.android/build-cache/9aa6ed9b2f8d6b1b238fb5155d3a9ce4159b3cf5/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
+        <dex dex="/home/tbg/AndroidStudioProjects/pizza/app/build/intermediates/pre-dexed/debug/classes_97e7b902f6f6da95c4ad4a981ec2d8bba3b432c8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/tbg/dev/android-sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
+        <dex dex="/home/tbg/AndroidStudioProjects/pizza/app/build/intermediates/pre-dexed/debug/support-annotations-25.1.0_7f23c26909c3de81397db41f0f235c71c6ca564f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/tbg/.android/build-cache/1ae87518a1e9e9e88ecf10d558096bc46e6dae68/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="662d7533b25a666c649c10a16b42edfb95f25a4f">
+        <dex dex="/home/tbg/AndroidStudioProjects/pizza/app/build/intermediates/pre-dexed/debug/classes_9c074ec733bb68a4c7d4ef4b5f54dd0ed6e9e30d.jar" />
+    </item>
+
+</items>
