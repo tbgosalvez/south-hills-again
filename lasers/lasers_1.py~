@@ -1,0 +1,208 @@
+# 
+# use python 2.7
+#
+
+# for Brian's system (Anaconda install mixed up path)
+#import sys
+#sys.path.append('/home/tbg/anaconda2/lib/python2.7/site-packages')
+
+import pygame
+import random
+
+
+# classes
+class Player(pygame.sprite.Sprite):
+    def __init__(self, img='spaceship.png'):
+        super(Player,self).__init__()
+        self.isVisible = True
+        self.vx = 0
+        self.vy = 0
+        self.image = pygame.image.load(img).convert()
+        self.image.set_colorkey(Constants.color_white)
+        self.rect = self.image.get_rect(center=
+                                          (Constants.winWidth/2,Constants.winHeight-48))
+    
+    def update(self):
+        if self.rect.x < 0 and self.vx < 0:
+            self.vx = 0
+        if self.rect.right > Constants.winWidth and self.vx > 0:
+            self.vx = 0
+        if self.rect.top < Constants.winHeight /2:
+            self.vy = 0
+            
+        self.rect.x += self.vx
+        self.rect.y += self.vy
+        
+
+      
+class Enemy(pygame.sprite.Sprite):
+    def __init__(self, img='asteroid.png'):
+        super(Enemy,self).__init__()
+        self.isVisible = False
+        self.image = pygame.image.load(img).convert()
+        self.image.set_colorkey(Constants.color_white)
+        self.rect = self.image.get_rect(center=(random.randint(0,Constants.winWidth),
+                                                  random.randint(-64,0)))
+    
+    def update(self):
+        self.rect.y += random.randint(1,3)
+            
+class Projectile(pygame.sprite.Sprite):
+    def __init__(self, img, ship):
+        super(Projectile,self).__init__()
+        self.isVisible = False
+        self.vx = 0
+        self.vy = 0
+        self.image = pygame.image.load(img).convert()
+        self.image.set_colorkey(Constants.color_white)
+        self.rect = self.image.get_rect()
+        self.rect.x, self.rect.y = ship.rect.x, ship.rect.y
+    
+    def update(self):
+        self.vy = -7
+        self.rect.y += self.vy
+                
+    
+#class BGSprite(pygame.sprite.Sprite):
+    
+    
+class Constants(object):
+    winWidth = 640
+    winHeight = 480
+    winSize = (winWidth,winHeight)
+    cFPS = 60
+    color_black = (0,0,0)
+    color_white = (255,255,255)
+    color_blue = (50,50,127)
+
+
+# end classes
+
+
+
+# globals
+
+isRunning = True
+clock = pygame.time.Clock()
+
+# screen (window) handle
+hwnd = pygame.display.set_mode(Constants.winSize)
+
+# Sprites
+spriteShip = Player('spaceship.png')
+spriteAsteroid = Enemy('asteroid.png')
+#spriteLaser = Sprite('laser.png')
+
+
+
+# Sprite Groups
+sprGrpEnemies = pygame.sprite.Group()
+sprGrpLasers = pygame.sprite.Group()
+sprGrpBgStars = pygame.sprite.Group()
+sprGrpAll = pygame.sprite.Group()
+sprGrpAll.add(spriteShip)
+
+
+
+# Events
+evEnemySpawn = pygame.USEREVENT + 1
+evStarSpawn = pygame.USEREVENT + 2
+pygame.time.set_timer(evEnemySpawn, 500)
+#pygame.time.set_timer(evStarSpawn, 250)
+
+
+
+# end globals
+
+
+# functions
+
+def initGame(window):
+    pygame.init()
+    pygame.display.set_caption('retro space shooter')
+    pygame.mixer.music.load('asteroids.mp3')
+    pygame.mixer.music.play(-1)
+
+
+
+def renderScene(window):
+    window.fill(Constants.color_black)
+  
+    for aa in sprGrpAll:
+        aa.update()
+        hwnd.blit(aa.image,aa.rect)
+
+    if pygame.sprite.spritecollideany(spriteShip, sprGrpEnemies):
+        spriteShip.isVisible = False
+        spriteShip.kill()
+        print('game over!')
+
+    for aa in sprGrpLasers: 
+        spAst = pygame.sprite.spritecollideany(aa, sprGrpEnemies)
+        if spAst:
+            spAst.kill()
+            aa.kill()
+        if aa.rect.bottom < 0:
+            aa.kill()
+    
+       
+
+    pygame.display.update()
+    clock.tick(Constants.cFPS)
+
+
+
+# end functions
+
+
+# __main__
+
+if __name__=='__main__':
+    
+    initGame(hwnd)
+    
+    while isRunning:
+        for ev in pygame.event.get():
+            print ev
+        
+            if ev.type == pygame.KEYDOWN:
+                if ev.key == pygame.K_q:
+                    isRunning = False
+                    break
+                
+                if ev.key == pygame.K_LEFT:
+                    spriteShip.vx = -5
+                elif ev.key == pygame.K_RIGHT:
+                    spriteShip.vx = 5
+                if ev.key == pygame.K_UP:
+                    spriteShip.vy = -5
+                elif ev.key == pygame.K_DOWN:
+                    spriteShip.vy = 5
+                if ev.key == pygame.K_SPACE:
+                   if spriteShip.isVisible:
+                       spLaser = Projectile('laser.png',spriteShip)
+                       sprGrpLasers.add(spLaser)
+                       sprGrpAll.add(spLaser)
+                        
+            elif ev.type == pygame.KEYUP:
+                if ev.key == pygame.K_LEFT or ev.key == pygame.K_RIGHT:
+                    spriteShip.vx = 0
+                elif ev.key == pygame.K_UP or ev.key == pygame.K_DOWN:
+                    spriteShip.vy = 0
+                    
+            if ev.type == evEnemySpawn:
+                spEnemy = Enemy()
+                sprGrpEnemies.add(spEnemy)
+                sprGrpAll.add(spEnemy)
+                
+            print(spriteShip.rect.x,spriteShip.rect.y)
+
+        renderScene(hwnd)
+        
+
+            
+    pygame.mixer.music.stop()
+    pygame.quit()
+    quit()
+
+# end __main__
