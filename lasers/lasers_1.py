@@ -10,6 +10,7 @@ import pygame
 import random
 import time
 import datetime
+import os
 
 # classes
 class Player(pygame.sprite.Sprite):
@@ -56,8 +57,8 @@ class Enemy(pygame.sprite.Sprite):
         # uncomment if not rotating
         # self.image.set_colorkey(Constants.color_white)
         
-        randScale = random.randint(5,64)
-        self.image = pygame.transform.scale(self.image, (randScale,randScale))
+        self.scale = random.randint(Constants.min_size_rock,Constants.max_size_rock)
+        self.image = pygame.transform.scale(self.image, (self.scale,self.scale))
         self.rect = self.image.get_rect(center=(random.randint(0,Constants.winWidth),
                                                   random.randint(-64,0)))
     
@@ -120,9 +121,12 @@ class Constants(object):
     color_black = (0,0,0)
     color_white = (255,255,255)
     color_blue = (50,50,127)
+    color_yellow = (255,255,0)
+    max_size_rock = 64
+    min_size_rock = 5
 
 
-
+# static
 class Stats(object):
     hitCount = 0
     numLives = 9
@@ -148,8 +152,12 @@ hwnd = pygame.display.set_mode(Constants.winSize)
 
 # Sprites
 spriteShip = Player('spaceship.png')
-spriteBG = pygame.image.load('saturn-north-pole-sunlit.jpg').convert()
-
+## random background image
+list_bg = os.listdir('bg')
+spriteBG = pygame.image.load(os.path.join('bg',list_bg[random.randint(0,len(list_bg)-1)])).convert()
+spriteBG = pygame.transform.scale(spriteBG, (Constants.winWidth, Constants.winHeight))
+## random font
+sprFont = os.path.join('fonts', os.listdir('fonts')[random.randint(0,len(os.listdir('fonts'))-1)])
 
 # Sprite Groups
 sprGrpEnemies = pygame.sprite.Group()
@@ -176,19 +184,24 @@ pygame.time.set_timer(evStarSpawn, 250)
 def initGame():
     
     # video
-    pygame.display.set_caption('retro space shooter')
+    pygame.display.set_caption('asteroids do not concern me, admiral.')
     
-    # bgm (artist: MASTER BOOT RECORD)
-    pygame.mixer.music.load('CLS.NFO.ogg')
-    pygame.mixer.music.play(-1)
+    # bgm
+    list_bgm=[]
+    for ff in os.listdir('bgm'):
+        if ff.endswith('.ogg'):
+            list_bgm.append(os.path.join('bgm',ff))
+
+    pygame.mixer.music.load(list_bgm[random.randint(0,len(list_bgm)-1)])
+    pygame.mixer.music.play(0,0.0)
     
     # objects
-    
+    # ...
 
 
 def loadText(t, size):
-    ff = pygame.font.Font('spqr.ttf', size)
-    fSurf = ff.render(t,True,Constants.color_white)
+    ff = pygame.font.Font(sprFont, size)
+    fSurf = ff.render(t,True,Constants.color_yellow)
     
     return fSurf, fSurf.get_rect()
 
@@ -238,13 +251,13 @@ def renderScene(window):
             spAst.sndExp.play(maxtime=2000)            
             spAst.kill()
             aa.kill()
-            Stats.hitCount += 1
+            Stats.hitCount += Constants.max_size_rock/spAst.scale
         if aa.rect.bottom < 0:
             aa.kill()
       
 
-    tHits, tHitsRect = loadText('pwns:' + str(Stats.hitCount), 18)
-    tLives,tLivesRect = loadText('goofs left:' + str(Stats.numLives), 18)
+    tHits, tHitsRect = loadText('pwns:' + str(Stats.hitCount), 28)
+    tLives,tLivesRect = loadText('goofs left:' + str(Stats.numLives), 28)
     tLivesRect.right = Constants.winWidth
     hwnd.blit(tHits,tHitsRect)
     hwnd.blit(tLives,tLivesRect)
@@ -304,10 +317,17 @@ if __name__=='__main__':
                 sprGrpStars.add(spStar)
 
             print(spriteShip.rect.x,spriteShip.rect.y)
+        # end for ev
 
         renderScene(hwnd)
-        
 
+        if pygame.mixer.music.get_busy() == False:
+            isRunning = False
+        
+    # end while isRunning
+    
+    dispMsg('[go do something else now]', 24)
+    time.sleep(3)
             
     pygame.mixer.music.stop()
     pygame.mixer.quit()
@@ -317,7 +337,6 @@ if __name__=='__main__':
     strNow = str(datetime.datetime.now())
     with open('stats.txt','a') as fOut:
         fOut.write(strNow + ': ' + str(Stats.hitCount) + ' hits!\n')
-        #fOut.close()
     
     quit()
 

@@ -1,12 +1,11 @@
+
 'Lasers': Arcade Space Shooter
 
 * main file: lasers_1.py
-* old, useless file: lasers.py
-* useless vim swap file is in there too
 
 Street Cred
 
-* Music: MASTER BOOT RECORD (via Bandcamp)
+* Music: MASTER BOOT RECORD (masterbootrecord.bandcamp.com (if you like it, buy it :-) ))
 * sfx: ryansnook (via Freesound)
-* Font: Iconian Fonts (via 1001freefonts)
-* Images: authors were overlooked (via Googling)
+* Fonts: Iconian Fonts, Typodermic Fonts, Aenigma Fonts, Blambot Fonts, neogrey ltd, Dieter Steffmann (via 1001 Free Fonts)
+* Images: NASA/JPL, others
