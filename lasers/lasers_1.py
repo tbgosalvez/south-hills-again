@@ -112,10 +112,10 @@ class Star(pygame.sprite.Sprite):
 
         win.blit(self.image,self.rect)
         
-    
+# static    
 class Constants(object):
     winWidth = 640
-    winHeight = 480
+    winHeight = 640
     winSize = (winWidth,winHeight)
     cFPS = 60
     color_black = (0,0,0)
@@ -326,7 +326,9 @@ if __name__=='__main__':
         
     # end while isRunning
     
+    hwnd.fill(Constants.color_black)
     dispMsg('[go do something else now]', 24)
+    pygame.display.flip()
     time.sleep(3)
             
     pygame.mixer.music.stop()

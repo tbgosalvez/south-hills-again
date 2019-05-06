@@ -2,6 +2,7 @@
 'Lasers': Arcade Space Shooter
 
 * main file: lasers_1.py
+* background image, music, and fonts are randomized with each execution
 
 Street Cred
 
